@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bài đọc song ngữ</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-color: #ffd6ba;
+  padding: 15px;
+  color: #7a4e3e;
+}
+
+.header-left {
+  position: absolute;
+  left: 15px;
+}
+
+.header-left a {
+  text-decoration: none;
+  color: #7a4e3e;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.header-left a:hover {
+  color: #ff6b6b;
+}
+
+.header-center {
+  font-size: 26px;
+  text-align: center;
+}
+
+body {
+  font-family: Arial;
+  background-color: #fff8f0;
+  margin: 0;
+  text-align: center;
+}
+
+/* HEADER */
+header {
+  background-color: #ffd6ba;
+  padding: 15px;
+  color: #7a4e3e;
+}
+
+.header-center {
+  font-size: 28px;
+}
+
+/* BUTTON */
+.controls {
+  margin: 20px;
+}
+
+button {
+  padding: 10px 16px;
+  margin: 5px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #a0e7e5;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ffb3ba;
+}
+
+/* CONTENT */
+.container {
+  width: 80%;
+  margin: auto;
+  text-align: left;
+  font-size: 22px;
+}
+
+.pair {
+  margin-bottom: 12px;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.pair.active {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transform: scale(1.02);
+}
+
+.speaker-icon{
+  float:right;
+  cursor:pointer;
+  color:#4a7c59;
+  margin-left:10px;
+}
+
+.speaker-icon:hover{
+  color:#ff6b6b;
+}
+
+/* EN */
+.en {
+  background: #d8f3dc;
+  padding: 12px;
+}
+
+/* VI */
+.vi {
+  background: #e3fdfd;
+  padding: 12px;
+  font-style: italic;
+  display: none;
+}
+
+/* footer */
+footer {
+  margin-top: 30px;
+  padding: 20px;
+  background: #fff0e1;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="header-left">
+    <a href="https://ketng91.github.io/khoathpt_Docsongngutubaihoc/">
+      <i class="fa-solid fa-house"></i> Home
+    </a>
+  </div>
+
+  <div class="header-center">
+    LUYỆN ĐỌC DỊCH - Lesson 6: THE ECO-FRIENDLY CLOTHING REVOLUTION
+  </div>
+</header>
+
+<div class="controls">
+  <button onclick="autoPlay()">▶ Auto đọc</button>
+  <button onclick="stopAuto()">⏹ Dừng</button>
+
+<button onclick="toggleAllVI()" id="toggleBtn">Hiện bản dịch</button>
+</div>
+
+<div class="container">
+
+<div class="pair" onclick="toggleVI(this)">
+  <div class="en">
+    READING PASSAGE: THE ECO-FRIENDLY CLOTHING REVOLUTION
+  </div>
+  <div class="vi">
+    BÀI ĐỌC: CUỘC CÁCH MẠNG THỜI TRANG THÂN THIỆN MÔI TRƯỜNG
+  </div>
+</div>
+
+<div class="pair" onclick="toggleVI(this)">
+  <div class="en">
+    The fast fashion industry is one of the main causes of pollution in the world because it creates too much waste.
+  </div>
+  <div class="vi">
+    Ngành thời trang nhanh là một trong những nguyên nhân chính gây ô nhiễm trên thế giới vì tạo ra quá nhiều rác thải.
+  </div>
+</div>
+
+<div class="pair" onclick="toggleVI(this)">
+  <div class="en">
+    Every second, a large truck full of cheap clothes is buried in the ground or burned somewhere on Earth.
+  </div>
+  <div class="vi">
+    Mỗi giây, một xe tải lớn chứa đầy quần áo rẻ tiền bị chôn lấp hoặc đốt ở một nơi nào đó trên Trái Đất.
+  </div>
+</div>
+
+<div class="pair" onclick="toggleVI(this)">
+  <div class="en">
+    To stop this problem, a new green movement called sustainable fashion is starting.
+  </div>
+  <div class="vi">
+    Để giải quyết vấn đề này, một phong trào xanh mới gọi là thời trang bền vững đang bắt đầu phát triển.
+  </div>
+</div>
+
+<div class="pair" onclick="toggleVI(this)">
+  <div class="en">
+    This movement encourages shoppers to change their daily habits.
+  </div>
+  <div class="vi">
+    Phong trào này khuyến khích người tiêu dùng thay đổi thói quen hằng ngày.
+  </div>
+</div>
+
+<div class="pair" onclick="toggleVI(this)">
+  <div class="en">
+    The most important step in this movement is using safe materials.
+  </div>
+  <div class="vi">
+    Bước quan trọng nhất trong phong trào này là sử dụng các vật liệu an toàn.
+  </div>
+</div>
+
+<div class="pair" onclick="toggleVI(this)">
+  <div class="en">
+    For example, organic cotton is grown without dangerous chemical pesticides.
+  </div>
+  <div class="vi">
+    Ví dụ, cotton hữu cơ được trồng mà không sử dụng thuốc trừ sâu hóa học độc hại.
+  </div>
+</div>
+
+<div class="pair" onclick="toggleVI(this)">
+  <div class="en">
+    This protects the soil and cleans the water supply.
+  </div>
+  <div class="vi">
+    Điều này giúp bảo vệ đất và làm sạch nguồn nước.
+  </div>
+</div>
+
+<div class="pair" onclick="toggleVI(this)">
+  <div class="en">
+    In addition, many popular brands are now using recycled polyester.
+  </div>
+  <div class="vi">
+    Ngoài ra, nhiều thương hiệu nổi tiếng hiện đang sử dụng polyester tái chế.
+  </div>
+</div>
+
+<div class="pair" onclick="toggleVI(this)">
+  <div class="en">
+    This special material is made from old plastic bottles, which stops plastic from polluting our oceans.
+  </div>
+  <div class="vi">
+    Loại vật liệu đặc biệt này được làm từ chai nhựa cũ, giúp ngăn nhựa gây ô nhiễm đại dương.
+  </div>
+</div>
+
+<div class="pair" onclick="toggleVI(this)">
+  <div class="en">
+    Also, factories are trying to make clothes that last much longer.
+  </div>
+  <div class="vi">
+    Ngoài ra, các nhà máy đang cố gắng sản xuất quần áo có độ bền lâu hơn.
+  </div>
+</div>
+
+<div class="pair" onclick="toggleVI(this)">
+  <div class="en">
+    Some companies even offer free repair services, asking customers to fix their old jackets and shirts instead of throwing them away.
+  </div>
+  <div class="vi">
+    Một số công ty thậm chí cung cấp dịch vụ sửa chữa miễn phí, khuyến khích khách hàng sửa áo khoác và áo sơ mi cũ thay vì vứt bỏ.
+  </div>
+</div>
+
+<div class="pair" onclick="toggleVI(this)">
+  <div class="en">
+    Shoppers are also helping by trading clothes with friends or buying used items from vintage stores.
+  </div>
+  <div class="vi">
+    Người tiêu dùng cũng góp phần bằng cách trao đổi quần áo với bạn bè hoặc mua đồ đã qua sử dụng từ các cửa hàng đồ vintage.
+  </div>
+</div>
+
+<div class="pair" onclick="toggleVI(this)">
+  <div class="en">
+    This helps save natural resources.
+  </div>
+  <div class="vi">
+    Điều này giúp tiết kiệm tài nguyên thiên nhiên.
+  </div>
+</div>
+
+<div class="pair" onclick="toggleVI(this)">
+  <div class="en">
+    In the end, protecting the planet through fashion requires a change in how we think.
+  </div>
+  <div class="vi">
+    Cuối cùng, việc bảo vệ hành tinh thông qua thời trang đòi hỏi sự thay đổi trong tư duy của chúng ta.
+  </div>
+</div>
+
+<div class="pair" onclick="toggleVI(this)">
+  <div class="en">
+    It is true that green clothing can be more expensive at first.
+  </div>
+  <div class="vi">
+    Đúng là quần áo xanh có thể đắt hơn lúc đầu.
+  </div>
+</div>
+
+<div class="pair" onclick="toggleVI(this)">
+  <div class="en">
+    However, buying strong, high-quality clothes will help you save money over time.
+  </div>
+  <div class="vi">
+    Tuy nhiên, việc mua quần áo bền và chất lượng cao sẽ giúp bạn tiết kiệm tiền về lâu dài.
+  </div>
+</div>
+
+<div class="pair" onclick="toggleVI(this)">
+  <div class="en">
+    By choosing fewer but better things, everyone can reduce waste and protect the world for future generations.
+  </div>
+  <div class="vi">
+    Bằng cách chọn ít hơn nhưng tốt hơn, mọi người có thể giảm rác thải và bảo vệ thế giới cho các thế hệ tương lai.
+  </div>
+</div>
+
+</div>
+<footer>© Lớp Anh thầy Kết</footer>
+
+<script>
+let showAll = false;
+
+function toggleAllVI() {
+  const viList = document.querySelectorAll('.vi');
+  const btn = document.getElementById('toggleBtn');
+
+  showAll = !showAll;
+
+  viList.forEach(v => {
+    v.style.display = showAll ? 'block' : 'none';
+  });
+
+  btn.innerText = showAll ? 'Ẩn bản dịch' : 'Hiện bản dịch';
+}
+
+/* ===== TOGGLE DỊCH TỪNG CÂU ===== */
+function toggleVI(el) {
+  const vi = el.querySelector('.vi');
+  vi.style.display = (vi.style.display === 'block') ? 'none' : 'block';
+}
+
+/* ===== SPEECH ===== */
+function speak(text){
+
+  speechSynthesis.cancel();
+
+  const utter = new SpeechSynthesisUtterance(text);
+
+  utter.lang = "en-US";
+
+  // đọc tự nhiên hơn
+  utter.rate = 0.9;
+  utter.pitch = 1.1;
+  utter.volume = 1;
+
+  const voices = speechSynthesis.getVoices();
+
+  // ưu tiên các giọng nữ
+  const femaleVoice =
+      voices.find(v => v.name.includes("Jenny")) ||
+      voices.find(v => v.name.includes("Aria")) ||
+      voices.find(v => v.name.includes("Female")) ||
+      voices.find(v => v.name.includes("Zira")) ||
+      voices.find(v => v.name.includes("Samantha")) ||
+      voices.find(v => v.name.includes("Google UK English Female")) ||
+      voices.find(v => v.name.includes("Google US English")) ||
+      voices.find(v => v.lang === "en-US");
+
+  if(femaleVoice){
+      utter.voice = femaleVoice;
+      console.log("Using voice:", femaleVoice.name);
+  }
+
+  speechSynthesis.speak(utter);
+}
+/* DOUBLE CLICK ĐỂ NGHE */
+document.querySelectorAll('.pair').forEach(pair => {
+  pair.addEventListener('dblclick', () => {
+    const text = pair.querySelector('.en').innerText;
+    speechSynthesis.cancel();
+    speak(text);
+  });
+});
+
+/* ===== AUTO ĐỌC ===== */
+let index = 0;
+let interval;
+
+function autoPlay() {
+  const pairs = document.querySelectorAll('.pair');
+  index = 0;
+
+  speechSynthesis.cancel();
+
+  interval = setInterval(() => {
+    if (index >= pairs.length) {
+      clearInterval(interval);
+      return;
+    }
+
+    const text = pairs[index].querySelector('.en').innerText;
+    speak(text);
+
+    index++;
+  }, 3500);
+}
+
+function stopAuto() {
+  clearInterval(interval);
+  speechSynthesis.cancel();
+}
+
+document.querySelectorAll('.en').forEach(en => {
+
+  const text = en.innerText.trim();
+
+  const icon = document.createElement('i');
+
+  icon.className =
+    'fa-solid fa-volume-high speaker-icon';
+
+  icon.onclick = function(e){
+    e.stopPropagation();
+    speak(text);
+  };
+
+  en.appendChild(icon);
+
+});
+
+speechSynthesis.onvoiceschanged = () => {
+  speechSynthesis.getVoices();
+};
+
+</script>
+
+</body>
+</html>
